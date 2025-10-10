@@ -174,7 +174,7 @@ static bool setArgNoUndef(Function &F, unsigned ArgNo) {
 }
 
 static bool setRetAndArgsNoUndef(Function &F) {
-  return setRetNoUndef(F) | setArgsNoUndef(F);
+  return setRetNoUndef(F) || setArgsNoUndef(F);
 }
 
 static bool setReturnedArg(Function &F, unsigned ArgNo) {

@@ -1612,7 +1612,7 @@ bool SDTypeConstraint::ApplyTypeConstraint(TreePatternNode *N,
     unsigned OResNo = 0;
     TreePatternNode *OtherNode =
       getOperandNum(x.SDTCisSameAs_Info.OtherOperandNum, N, NodeInfo, OResNo);
-    return NodeToApply->UpdateNodeType(ResNo, OtherNode->getExtType(OResNo),TP)|
+    return NodeToApply->UpdateNodeType(ResNo, OtherNode->getExtType(OResNo),TP) ||
            OtherNode->UpdateNodeType(OResNo,NodeToApply->getExtType(ResNo),TP);
   }
   case SDTCisVTSmallerThanOp: {
