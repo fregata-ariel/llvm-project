@@ -1,0 +1,19 @@
+{
+    "name": "myriscvx devcontainer",
+    "build":{
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "postCreateCommand": "bash .devcontainer/postCreateScript.sh",
+    "updateRemoteUserUID": true,
+    "remoteUser": "vscode",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "llvm-vs-code-extensions.vscode-clangd",
+                "llvm-vs-code-extensions.lldb-dap",
+                "llvm-vs-code-extensions.vscode-mlir"
+            ]
+        }
+    }
+}
