@@ -2,7 +2,10 @@
     "name": "myriscvx devcontainer",
     "build":{
         "dockerfile": "Dockerfile",
-        "context": "."
+        "context": ".",
+        "args": {
+            "BASE_LLVM_VERSION": "11"
+        }
     },
     "postCreateCommand": "bash .devcontainer/postCreateScript.sh",
     "updateRemoteUserUID": true,
